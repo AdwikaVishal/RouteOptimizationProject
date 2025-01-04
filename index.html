@@ -10,15 +10,15 @@
     <h1>Route Optimization System</h1>
     <form method="POST" action="/">
         <div class="form-container">
-            <!-- Start Location -->
+          
             <label>Start Location:</label>
             <input type="text" name="start_location" required><br>
 
-            <!-- End Location -->
+         
             <label>End Location:</label>
             <input type="text" name="end_location" required><br>
 
-            <!-- Vehicle Type Dropdown -->
+           
             <label>Vehicle Type:</label>
             <select name="vehicle_type" id="vehicle_type" onchange="updateFuelEfficiency()">
                 <option value="diesel">Diesel</option>
@@ -26,34 +26,34 @@
                 <option value="electric">Electric</option>
             </select><br><br>
 
-            <!-- Fuel Efficiency Input -->
+         
             <label>Fuel Efficiency (km/l):</label>
             <input type="number" name="fuel_efficiency" id="fuel_efficiency" step="1" required><br><br>
 
-            <!-- Submit Button -->
+          
             <button type="submit">Calculate</button>
         </div>
     </form>
 
-    <!-- JavaScript for Auto-Filling Fuel Efficiency -->
+  
     <script>
-        // Default fuel efficiency values (in km/l) for different vehicle types
+      
         const fuelEfficiencyValues = {
             diesel: 12,
             petrol: 15,
             electric: 25
         };
 
-        // Update fuel efficiency based on vehicle type selection
+       
         function updateFuelEfficiency() {
             const vehicleType = document.getElementById("vehicle_type").value;
             const fuelEfficiencyInput = document.getElementById("fuel_efficiency");
 
-            // Set the fuel efficiency based on selected vehicle type
+           
             fuelEfficiencyInput.value = fuelEfficiencyValues[vehicleType];
         }
 
-        // Initialize the fuel efficiency value when the page loads
+      
         window.onload = function() {
             updateFuelEfficiency();
         };
