@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+   
+    <header>
+        <div class="icon-section">
+            <i class="fas fa-map-marked-alt"></i>
+            We have all the data collected for you here
+        </div>
+    </header>
+
+   
+    <span class="Heading">
+        <div class="icon-section">
+            <i class="fas fa-route"></i>
+            <h1>Route Details</h1>
+        </div>
+        <p><strong>Start Location:</strong> {{ start_location }}</p>
+        <p><strong>End Location:</strong> {{ end_location }}</p>
+    </span>
+
+   
+    <span class="Info">
+        <div class="icon-section">
+            <i class="fas fa-info-circle"></i>
+            <h2>Route Information</h2>
+        </div>
+        {% for route in routes %}
+            <p><i class="fas fa-arrow-right"></i> Distance: {{ route.distance / 1000 }} km</p>
+            <p><i class="fas fa-clock"></i> Duration: {{ route.duration / 60 }} minutes</p>
+        {% endfor %}
+    </span>
+
+   
+    <span class="Weather">
+        <div class="icon-section">
+            <i class="fas fa-cloud-sun"></i>
+            <h2>Weather Data</h2>
+        </div>
+        <p><i class="fas fa-wind"></i> Air Quality: {{ weather_data.air_quality }}</p>
+        <p><i class="fas fa-thermometer-half"></i> Temperature: {{ weather_data.temperature }}°C</p>
+    </span>
+
+
+    <span class="Traffic">
+        <div class="icon-section">
+            <i class="fas fa-traffic-light"></i>
+            <h2>Traffic Data</h2>
+        </div>
+        <p><i class="fas fa-car"></i> Current Speed: {{ traffic_data.current_speed }} km/h</p>
+        <p><i class="fas fa-road"></i> Free Flow Speed: {{ traffic_data.free_flow_speed }} km/h</p>
+    </span>
+
+
+    <span class="Emissions">
+        <div class="icon-section">
+            <i class="fas fa-leaf"></i>
+            <h2>Emissions</h2>
+        </div>
+        <p><i class="fas fa-cloud"></i> Estimated Emissions: {{ emissions }} grams CO2</p>
+    </span>
+</body>
+</html>

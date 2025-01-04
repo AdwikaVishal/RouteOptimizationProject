@@ -1,0 +1,87 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(173, 216, 230);
+    padding: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+.Heading {
+    background-color: rgb(212, 251, 243);
+    border-radius: 1rem;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Heading h1 {
+    margin: 0;
+    color: #333;
+}
+
+
+span {
+    background-color: rgb(212, 251, 243);
+    border-radius: 1rem;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+
+span i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+.Info {
+    background-color: #d0f0f0;
+    border-left: 5px solid #4caf50;
+}
+
+.Weather {
+    background-color: #f0e5f0;
+    border-left: 5px solid #ff9800;
+}
+
+.Traffic {
+    background-color: #f0f8ff;
+    border-left: 5px solid #2196f3;
+}
+
+.Emissions {
+    background-color: #f5f5dc;
+    border-left: 5px solid #9c27b0;
+}
+
+.icon-section {
+    display: flex;
+    align-items: center;
+}
+
+.icon-section i {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #333;
+}
